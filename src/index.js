@@ -8,6 +8,7 @@ const gallery = document.querySelector('.gallery');
 const buttonLoad = document.querySelector('.load-more-button');
 const searchForm = document.getElementById('id-search-form');
 const myInput = document.getElementById('input');
+const listWarn = document.querySelector(".value-error");
 
 let currentPage = 1;
 
@@ -20,7 +21,9 @@ searchForm.addEventListener("submit", async function (e) {
     const cards = cardList(result.hits);
     if (result.hits.length === 0) {
         myInput.value = "";
-        return alert("Введите корректный запрос")
+        listWarn.innerHTML = `<p>Введите корректный запрос!</p>`;
+    } else {
+        listWarn.innerHTML = "";
     }
     if (myInput.value !== "") {
         gallery.innerHTML = cards;
