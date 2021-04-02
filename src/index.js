@@ -8,7 +8,7 @@ const gallery = document.querySelector('.gallery');
 const buttonLoad = document.querySelector('.load-more-button');
 const searchForm = document.getElementById('id-search-form');
 const myInput = document.getElementById('input');
-const listWarn = document.querySelector(".value-error");
+const listWarn = document.querySelector(".list-warn");
 
 let currentPage = 1;
 
